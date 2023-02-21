@@ -1,0 +1,25 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+@mixin color($theme) {
+  $color-config: mat.get-color-config($theme);
+  $foreground-color-palette: map.get($color-config, foreground);
+
+  app-menu-panel {
+
+    mat-toolbar.user-toolbar {
+
+      button {
+        color: mat.get-color-from-palette(
+          $foreground-color-palette,
+          secondary-text
+        );
+      }
+
+      span.spacer {
+        border-right: 1px solid
+          mat.get-color-from-palette($foreground-color-palette, divider);
+      }
+    }
+  }
+}

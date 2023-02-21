@@ -1,0 +1,32 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+@use './card/' as card;
+
+@mixin color($theme) {
+  $color-config: mat.get-color-config($theme);
+  $foreground-color-palette: map.get($color-config, foreground);
+
+  @include card.color($theme);
+
+  ui-analytics {
+    display: block;
+
+    section.product {
+      display: grid;
+      grid-auto-rows: 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 8px;
+    }
+
+    section.stats-chart {
+      margin-top: 24px;
+      overflow: hidden;
+      position: relative;
+      width: 90%;
+    }
+  }
+
+  .activity-tooltip {
+    font-size: 0.8rem;
+  }
+}

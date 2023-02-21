@@ -1,0 +1,41 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+@use './components/chat-toolbar/styles/chat-toolbar.mixin' as chat-toolbar;
+@use './components/info-bar/styles/info-bar.mixin' as infoBar;
+@use './components/primary-bar/styles/primary-bar.mixin' as primaryBar;
+@use 'home.mixin' as home;
+
+@mixin color($theme) {
+  $color-config: mat.get-color-config($theme);
+  $background-color-palette: map.get($color-config, background);
+
+  @include chat-toolbar.color($theme);
+  @include infoBar.color($theme);
+  @include primaryBar.color($theme);
+  @include home.color($theme);
+
+  app-root {
+    > header {
+      background-color: mat.get-color-from-palette(
+        $background-color-palette,
+        app-bar
+      );
+      left: 0px;
+      position: fixed;
+      right: 0px;
+      top: 0px;
+      z-index: 10;
+    }
+    
+    > section.main {
+      display: flex;
+      padding-top: 90px;
+
+      > main {
+        flex: 1 1 0%;
+        min-height: 100vh;
+        padding: 32px 16px;
+      }
+    }
+  }
+}

@@ -1,0 +1,85 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+@use '../sidenav/styles/sidenav.mixin' as sidenav;
+
+@mixin core($light-theme, $dark-theme) {
+  @include mat.core();
+  @include mat.button-theme($light-theme);
+  @include mat.card-theme($light-theme);
+  @include mat.datepicker-theme($light-theme);
+  @include mat.form-field-theme($light-theme);
+  @include mat.icon-theme($light-theme);
+  @include mat.select-theme($light-theme);
+  @include mat.table-theme($light-theme);
+  @include mat.tabs-theme($light-theme);
+  @include mat.toolbar-theme($light-theme);
+  @include mat.tooltip-theme($light-theme);
+
+  body {
+    @include color($light-theme);
+    $color-config: mat.get-color-config($light-theme);
+    $background-color-palette: map.get($color-config, background);
+    $foreground-color-palette: map.get($color-config, foreground);
+
+    background: mat.get-color-from-palette(
+      $background-color-palette,
+      background
+    );
+    color: mat.get-color-from-palette($foreground-color-palette, text);
+    overflow: hidden;
+  }
+
+  .dark-theme {
+    @include color($dark-theme);
+
+    $color-config: mat.get-color-config($dark-theme);
+    $background-color-palette: map.get($color-config, background);
+    $foreground-color-palette: map.get($color-config, foreground);
+
+    background: mat.get-color-from-palette(
+      $background-color-palette,
+      background
+    );
+    color: mat.get-color-from-palette($foreground-color-palette, text);
+  }
+}
+
+@mixin color($theme) {
+  @include mat.button-color($theme);
+  @include mat.card-color($theme);
+  @include mat.datepicker-color($theme);
+  @include mat.form-field-color($theme);
+  @include mat.icon-color($theme);
+  @include mat.select-color($theme);
+  @include mat.table-color($theme);
+  @include mat.tabs-color($theme);
+  @include mat.toolbar-color($theme);
+  @include mat.tooltip-color($theme);
+
+  $color-config: mat.get-color-config($theme);
+  $background-color-palette: map.get($color-config, background);
+  $foreground-color-palette: map.get($color-config, foreground);
+
+  ui-dashboard {
+    > header {
+      background-color: mat.get-color-from-palette(
+        $background-color-palette,
+        app-bar
+      );
+      border-bottom-color: mat.get-color-from-palette(
+        $foreground-color-palette,
+        divider
+      );
+    }
+  }
+
+  mat-card-title.mat-mdc-card-title {
+    color: mat.get-color-from-palette($foreground-color-palette, text);
+  }
+
+  mat-card-subtitle.mat-mdc-card-subtitle {
+    color: mat.get-color-from-palette($foreground-color-palette, hint-text);
+  }
+
+  @include sidenav.color($theme);
+}

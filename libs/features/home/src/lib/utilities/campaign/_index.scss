@@ -1,0 +1,17 @@
+@use './flash-sale/' as flashSale;
+@use './promo/' as promo;
+
+@mixin color($theme) {
+  @include flashSale.color($theme);
+  @include promo.color($theme);
+
+  ui-campaign {
+    mat-tab-header.mat-mdc-tab-header {
+      font-size: .9rem;
+    }
+
+    .mat-mdc-tab-body-content {
+      height: auto;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+:host {
+  $sidenav-max-width: 230px;
+  $sidenav-min-width: 72px;
+  $sidenav-top: 97px;
+  
+  border-right-style: solid;
+  border-right-width: 1px;
+  bottom: 0px;
+  left: 0px;
+  position: fixed;
+  top: $sidenav-top;
+  transition: width 0.3s ease-out;
+  width: $sidenav-max-width;
+  z-index: 1000;
+
+  &.min {
+    width: $sidenav-min-width;
+
+    nav.sidenav {
+      width: $sidenav-min-width;
+    }
+
+    button.toggle {
+      .menu-text {
+        display: none;
+      }
+
+      .toggle-icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  nav.sidenav {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - $sidenav-top);
+    overflow-y: auto;
+    padding-top: 36px;
+    transition: width 0.3s ease;
+    width: $sidenav-max-width;
+  }
+
+  button.toggle {
+    font-size: .72rem;
+    height: 28px;
+    left: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+    width: 100%;
+
+    .toggle-icon {
+      display: inline-block;
+      transition: transform 0.3s ease 0.2s;
+    }
+
+    .menu-text {
+      display: inline-block;
+      margin-left: 2px;
+    }
+  }
+}

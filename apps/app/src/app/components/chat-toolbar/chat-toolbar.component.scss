@@ -1,0 +1,20 @@
+:host {
+  border-bottom-style: solid;
+  border-bottom-width: 4px;
+  border-radius: 8px 8px 0 0;
+  display: block;
+  overflow: hidden;
+  padding: 4px 8px;
+
+  button.mat-button {
+    min-width: 0;
+  }
+
+  span.chat-text {
+    margin-left: 8px;
+  }
+
+  fa-icon {
+    font-size: 1.1rem;
+  }
+}

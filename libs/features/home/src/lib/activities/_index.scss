@@ -1,0 +1,21 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+@use './activity/' as activity;
+
+@mixin color($theme) {
+  $color-config: mat.get-color-config($theme);
+  $foreground-color-palette: map.get($color-config, foreground);
+
+  @include activity.color($theme);
+
+  ui-activities {
+    display: block;
+
+    section.activities {
+      display: grid;
+      grid-auto-rows: 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 12px;
+    }
+  }
+}

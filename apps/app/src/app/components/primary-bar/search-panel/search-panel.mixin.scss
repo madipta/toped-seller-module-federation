@@ -1,0 +1,41 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+@mixin color($theme) {
+  $color-config: mat.get-color-config($theme);
+  $background-color-palette: map.get($color-config, background);
+  $foreground-color-palette: map.get($color-config, foreground);
+
+  app-search-panel {
+
+    form {
+      border: 1px solid
+        mat.get-color-from-palette($foreground-color-palette, divider);
+
+      input[type='search'] {
+        background-color: mat.get-color-from-palette(
+          $background-color-palette,
+          background
+        );
+        color: mat.get-color-from-palette(
+          $foreground-color-palette,
+          text
+        );
+
+        &::placeholder {
+          color: mat.get-color-from-palette(
+            $foreground-color-palette,
+            secondary-text
+          );
+        }
+      }
+
+      button.search-button {
+        background-color: mat.get-color-from-palette(
+          $background-color-palette,
+          app-bar
+        );
+      }
+    }
+  }
+}
