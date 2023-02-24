@@ -3,22 +3,18 @@ import { RouterOutlet } from '@angular/router';
 import {
   DashboardComponent,
   ISideNavMenu,
-  SideNavMenuListComponent,
-  StickyBarDirective,
+  SideNavMenuListComponent
 } from '@/ui/core/dashboard';
-import { ChatToolbarComponent } from './components/chat-toolbar/chat-toolbar.component';
 import { InfoBarComponent } from './components/info-bar/info-bar.component';
 import { PrimaryBarComponent } from './components/primary-bar/primary-bar.component';
 
 @Component({
   imports: [
-    ChatToolbarComponent,
     DashboardComponent,
     InfoBarComponent,
     PrimaryBarComponent,
     RouterOutlet,
-    SideNavMenuListComponent,
-    StickyBarDirective,
+    SideNavMenuListComponent
   ],
   selector: 'app-root',
   standalone: true,
@@ -32,9 +28,6 @@ import { PrimaryBarComponent } from './components/primary-bar/primary-bar.compon
         <ui-sidenav-menu-list [config]="config" />
       </section>
       <router-outlet></router-outlet>
-      <div uiStickyBar="bottom">
-        <app-chat-toolbar></app-chat-toolbar>
-      </div>
     </ui-dashboard>
   `,
 })

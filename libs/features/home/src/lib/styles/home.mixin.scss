@@ -2,6 +2,7 @@
 @use '@angular/material' as mat;
 @use '../activities/' as activities;
 @use '../analytics/' as analytics;
+@use '../chat-toolbar/styles/chat-toolbar.mixin' as chat-toolbar;
 @use '../performances/' as performances;
 @use '../stock-info/' as stockInfo;
 @use '../updates/' as updates;
@@ -13,12 +14,13 @@
 
   @include activities.color($theme);
   @include analytics.color($theme);
+  @include chat-toolbar.color($theme);
   @include performances.color($theme);
   @include stockInfo.color($theme);
   @include updates.color($theme);
   @include utilities.color($theme);
 
-  ui-home {
+  ui-home .home-outer {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr;

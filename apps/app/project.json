@@ -19,6 +19,7 @@
         "styles": [
           "libs/core/base-ui/src/lib/styles/reset.css",
           "libs/core/base-ui/src/lib/styles/reset.matui.scss",
+          "libs/core/base-ui/src/lib/styles/sticky-bar.scss",
           "apps/app/src/styles.scss"
         ],
         "stylePreprocessorOptions": {

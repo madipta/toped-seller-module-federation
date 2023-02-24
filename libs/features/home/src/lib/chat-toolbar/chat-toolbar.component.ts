@@ -4,7 +4,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
   imports: [FontAwesomeModule, MatButtonModule],
-  selector: 'app-chat-toolbar',
+  selector: 'ui-chat-toolbar',
   standalone: true,
   styleUrls: ['chat-toolbar.component.scss'],
   template: `

@@ -1,0 +1,15 @@
+.ui-sticky-bar {
+  position: fixed;
+  z-index: 10;
+
+  &.sticky-bottom {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  &.sticky-bottom-right {
+    bottom: 0;
+    right: 72px;
+  }
+}
