@@ -1,7 +1,7 @@
 @use 'sass:map';
 @use '@angular/material' as mat;
 @use 'dashboard.mixin' as dashboard;
-@use './app/' as app;
+@use './app/app.mixin' as app;
 
 $my-primary-palette: mat.define-palette(mat.$green-palette);
 $my-accent-palette: mat.define-palette(mat.$orange-palette, 700);

@@ -1,0 +1,35 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+@use 'chat.mixin' as chat;
+
+$my-primary-palette: mat.define-palette(mat.$green-palette);
+$my-accent-palette: mat.define-palette(mat.$orange-palette, 700);
+$my-warn-palette: mat.define-palette(mat.$red-palette);
+
+$light-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $my-primary-palette,
+      accent: $my-accent-palette,
+      warn: $my-warn-palette,
+    )
+  )
+);
+
+@include mat.core();
+@include mat.button-theme($light-theme);
+@include mat.card-theme($light-theme);
+@include mat.datepicker-theme($light-theme);
+@include mat.form-field-theme($light-theme);
+@include mat.icon-theme($light-theme);
+@include mat.select-theme($light-theme);
+@include mat.table-theme($light-theme);
+@include mat.tabs-theme($light-theme);
+@include mat.toolbar-theme($light-theme);
+@include mat.tooltip-theme($light-theme);
+@include chat.color($light-theme);
+
+body {
+  font-family: 'Roboto Flex', sans-serif;
+  padding: 16px;
+}

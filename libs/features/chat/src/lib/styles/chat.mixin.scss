@@ -1,0 +1,129 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+@mixin color($theme) {
+  $color-config: mat.get-color-config($theme);
+  $background-color-palette: map.get($color-config, background);
+  $foreground-color-palette: map.get($color-config, foreground);
+  $primary-color-palette: map.get($color-config, primary);
+
+  ui-chat {
+    color: mat.get-color-from-palette($foreground-color-palette, text);
+  }
+
+  ui-chat-list {
+    .broadcast-button {
+      background-color: mat.get-color-from-palette($primary-color-palette);
+      color: mat.get-color-from-palette(
+        $primary-color-palette,
+        darker-contrast
+      );
+    }
+
+    .search {
+      .wrapper {
+        border-color: mat.get-color-from-palette(
+          $foreground-color-palette,
+          divider
+        );
+      }
+    }
+  }
+
+  ui-chat-list-item {
+    &:hover {
+      background-color: mat.get-color-from-palette(
+        $background-color-palette,
+        hover
+      );
+    }
+
+    .chat-list-icon {
+      color: mat.get-color-from-palette($foreground-color-palette, hint-text);
+    }
+
+    .chat-list-info {
+      p {
+        color: mat.get-color-from-palette(
+          $foreground-color-palette,
+          secondary-text
+        );
+      }
+    }
+    .chat-list-date {
+      color: mat.get-color-from-palette($foreground-color-palette, hint-text);
+    }
+  }
+
+  ui-chat-conversation.chat-conversation {
+    .header {
+      .sender-info p {
+        color: mat.get-color-from-palette(
+          $foreground-color-palette,
+          secondary-text
+        );
+      }
+
+      .menu {
+        color: mat.get-color-from-palette(
+          $foreground-color-palette,
+          secondary-text
+        );
+      }
+    }
+
+    .warning {
+      color: mat.get-color-from-palette($foreground-color-palette, hint-text);
+
+      a:link,
+      a:visited,
+      a:hover,
+      a:active {
+        color: mat.get-color-from-palette($primary-color-palette, darker);
+      }
+    }
+
+    .main {
+      .guest-message .wrapper {
+        border-color: mat.get-color-from-palette(
+          $foreground-color-palette,
+          divider
+        );
+      }
+
+      .host-message .wrapper {
+        background-color: mat.get-color-from-palette(
+          $background-color-palette,
+          app-bar
+        );
+      }
+
+      .time {
+        color: mat.get-color-from-palette($foreground-color-palette, hint-text);
+      }
+    }
+  }
+
+  .footer {
+    .input-wrapper {
+      border-color: mat.get-color-from-palette(
+        $foreground-color-palette,
+        divider
+      );
+      button {
+        color: mat.get-color-from-palette($foreground-color-palette, hint-text);
+      }
+    }
+
+    .send-messsage {
+      background-color: mat.get-color-from-palette(
+        $primary-color-palette,
+        default
+      );
+      color: mat.get-color-from-palette(
+        $primary-color-palette,
+        darker-contrast
+      );
+    }
+  }
+}

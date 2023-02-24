@@ -17,6 +17,7 @@
     "paths": {
       "@/ui/core/base-ui": ["libs/core/base-ui/src/index.ts"],
       "@/ui/core/dashboard": ["libs/core/dashboard/src/index.ts"],
+      "@/ui/features/chat": ["libs/features/chat/src/index.ts"],
       "@/ui/features/home": ["libs/features/home/src/index.ts"]
     }
   },

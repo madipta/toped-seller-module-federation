@@ -3,6 +3,7 @@ import { bootstrapApplication } from '@angular/platform-browser';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideRouter } from '@angular/router';
 import { SidenavModule } from '@/ui/core/dashboard';
+import { ChatModule } from '@/ui/features/chat';
 import { HomeModule } from '@/ui/features/home';
 import { AppComponent } from './app/app.component';
 import { AppModule } from './app/app.module';
@@ -15,7 +16,7 @@ if (environment.production) {
 
 bootstrapApplication(AppComponent, {
   providers: [
-    importProvidersFrom(AppModule, HomeModule, SidenavModule),
+    importProvidersFrom(AppModule, ChatModule, HomeModule, SidenavModule),
     provideAnimations(),
     provideRouter(appRoutes),
   ],
