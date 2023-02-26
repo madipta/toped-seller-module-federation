@@ -1,0 +1,93 @@
+
+mat-card.outer {
+  --offset-left: 48px;
+  padding: 0;
+  margin-bottom: 16px;
+
+  mat-card-header {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    margin: 0 16px;
+    padding: 16px 0;
+  }
+
+  mat-card-content {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+
+    .starter {
+      align-items: center;
+      display: flex;
+      gap: 16px;
+
+      .photo {
+        font-size: 2rem;
+      }
+
+      .info {
+        display: flex;
+        flex: 1 1 0%;
+        flex-direction: column;
+
+        .user {
+          font-size: 0.75rem;
+        }
+
+        .topic {
+          font-size: 1rem;
+          font-weight: 500;
+          margin-top: 2px;
+        }
+      }
+    }
+
+    .replies {
+      border-left-style: solid;
+      border-left-width: 2px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-left: var(--offset-left);
+      margin-top: 16px;
+      padding: 8px 16px;
+
+      .customer-reply, .seller-reply {
+        display: flex;
+        gap: 16px;
+
+        .photo {
+          font-size: 1.25rem;
+          margin-top: 2px;
+        }
+
+        .info {
+          display: flex;
+          flex-direction: column;
+
+          .user {
+            font-size: 0.75rem;
+          }
+
+          .content {
+            font-size: .85rem;
+          }
+        }
+      }
+    }
+
+    .reply-input {
+      display: flex;
+      flex-direction: column;
+      margin-left: var(--offset-left);
+      margin-top: 16px;
+
+      textarea {
+        border-radius: 8px;
+        border-style: solid;
+        border-width: 1px;
+        padding: 8px;
+      }
+    }
+  }
+}

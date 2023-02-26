@@ -33,7 +33,7 @@ import { PrimaryBarComponent } from './components/primary-bar/primary-bar.compon
 })
 export class AppComponent {
   config: ISideNavMenu[] = [
-    { type: 'Item', caption: 'Home', icon: 'home', link: 'home' },
+    { type: 'Item', caption: 'Home', icon: 'home', link: '' },
     { type: 'Item', caption: 'Chat', icon: 'message', link: 'chat' },
     { type: 'Item', caption: 'Diskusi', icon: 'comments', link: 'discussion' },
     {

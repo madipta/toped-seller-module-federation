@@ -9,7 +9,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   styleUrls: ['./list-item.component.scss'],
   template: `
     <div class="chat-list-icon">
-      <fa-icon color="accent" icon="user-circle"></fa-icon>
+      <fa-icon icon="user-circle"></fa-icon>
     </div>
     <div class="chat-list-info">
       <h2>{{ name }}</h2>

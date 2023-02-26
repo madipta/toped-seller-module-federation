@@ -1,0 +1,39 @@
+:host {
+  display: flex;
+  flex-direction: column;
+
+  > h2 {
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+  }
+}
+
+mat-card {
+  padding: 0;
+
+  mat-card-header {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    padding-bottom: 16px;
+
+    .filter {
+      align-items: center;
+      display: flex;
+      gap: 8px;
+
+      button {
+        background-color: transparent;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 16px;
+        padding: 8px 16px;
+      }
+    }
+  }
+
+  mat-card-content {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 16px 16px;
+  }
+}

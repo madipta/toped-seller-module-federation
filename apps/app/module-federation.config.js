@@ -1,4 +1,4 @@
 module.exports = {
   name: 'app',
-  remotes: ['chat', 'home'],
+  remotes: ['chat', 'discussion', 'home'],
 };

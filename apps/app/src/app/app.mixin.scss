@@ -3,6 +3,7 @@
 @use './components/info-bar/styles/info-bar.mixin' as infoBar;
 @use './components/primary-bar/styles/primary-bar.mixin' as primaryBar;
 @use 'chat.mixin' as chat;
+@use 'discussion.mixin' as discussion;
 @use 'home.mixin' as home;
 
 @mixin color($theme) {
@@ -12,6 +13,7 @@
   @include infoBar.color($theme);
   @include primaryBar.color($theme);
   @include chat.color($theme);
+  @include discussion.color($theme);
   @include home.color($theme);
 
   app-root {

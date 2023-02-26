@@ -17,7 +17,6 @@
     fa-icon {
       align-content: center;
       font-size: 1.1rem;
-      height: auto;
     }
 
     span.spacer {
@@ -27,7 +26,8 @@
     }
 
     span.username {
-      margin-left: 8px;
+      font-size: .8rem;
+      margin-left: 6px;
     }
   }
 }

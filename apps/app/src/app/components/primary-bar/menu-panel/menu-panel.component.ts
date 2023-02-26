@@ -20,5 +20,5 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   `,
 })
 export class MenuPanelComponent {
-  userName = 'Madipta';
+  userName = 'Abu Umair';
 }

@@ -6,6 +6,10 @@ export const appRoutes: Route[] = [
     loadChildren: () => import('chat/Routes').then((m) => m.remoteRoutes),
   },
   {
+    path: 'discussion',
+    loadChildren: () => import('discussion/Routes').then((m) => m.remoteRoutes),
+  },
+  {
     path: 'home',
     loadChildren: () => import('home/Routes').then((m) => m.remoteRoutes),
   },
