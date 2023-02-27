@@ -19,8 +19,8 @@ clone this project then install dependancy using
 
 open http://localhost:4200 (host)
 
-open http://localhost:4201 (home remote)
-open http://localhost:4202 (chat remote)
+open http://localhost:4201 (home remote)   
+open http://localhost:4202 (chat remote)   
 open http://localhost:4203 (discussion remote)
 
 
