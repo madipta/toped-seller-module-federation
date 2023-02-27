@@ -41,8 +41,8 @@ export class AppComponent {
       caption: 'Produk',
       icon: 'box-archive',
       children: [
-        { type: 'Item', caption: 'Tambah Produk', link: 'product' },
-        { type: 'Item', caption: 'Daftar Produk', link: 'product' },
+        { type: 'Item', caption: 'Tambah Produk', link: 'product/create' },
+        { type: 'Item', caption: 'Daftar Produk', link: 'product/list' },
       ],
     },
     {
@@ -57,11 +57,11 @@ export class AppComponent {
       caption: 'Statistik',
       icon: 'chart-line',
       children: [
-        { type: 'Item', caption: 'Wawasan Toko', link: 'statistik' },
-        { type: 'Item', caption: 'Wawasan Produk', link: 'statistik' },
-        { type: 'Item', caption: 'Wawasan Kunjungan', link: 'statistik' },
-        { type: 'Item', caption: 'Wawasan Operasional', link: 'statistik' },
-        { type: 'Item', caption: 'Wawasan Pembeli', link: 'statistik' },
+        { type: 'Item', caption: 'Wawasan Toko', link: 'statistik/toko' },
+        { type: 'Item', caption: 'Wawasan Produk', link: 'statistik/produk' },
+        { type: 'Item', caption: 'Wawasan Kunjungan', link: 'statistik/kunjungan' },
+        { type: 'Item', caption: 'Wawasan Operasional', link: 'statistik/operasional' },
+        { type: 'Item', caption: 'Wawasan Pembeli', link: 'statistik/pembeli' },
       ],
     },
     {
@@ -75,8 +75,8 @@ export class AppComponent {
       caption: 'Iklan & Promosi',
       icon: 'bullhorn',
       children: [
-        { type: 'Item', caption: 'Promosi', link: 'advertisement' },
-        { type: 'Item', caption: 'Iklan TopAds', link: 'advertisement' },
+        { type: 'Item', caption: 'Promosi', link: 'advertisement/promosi' },
+        { type: 'Item', caption: 'Iklan TopAds', link: 'advertisement/iklan' },
       ],
     },
     {
@@ -90,8 +90,8 @@ export class AppComponent {
       caption: 'Kata Pembeli',
       icon: 'phone-volume',
       children: [
-        { type: 'Item', caption: 'Ulasan', link: 'reviews' },
-        { type: 'Item', caption: 'Pesanan Dikomplain', link: 'reviews' },
+        { type: 'Item', caption: 'Ulasan', link: 'reviews/ulasan' },
+        { type: 'Item', caption: 'Pesanan Dikomplain', link: 'reviews/komplain' },
       ],
     },
     {
@@ -99,8 +99,8 @@ export class AppComponent {
       caption: 'Layanan Tambahan',
       icon: 'circle-plus',
       children: [
-        { type: 'Item', caption: 'Kemasan Produk', link: 'other-service' },
-        { type: 'Item', caption: 'Bayar Tagihan', link: 'other-service' },
+        { type: 'Item', caption: 'Kemasan Produk', link: 'other-service/kemasan' },
+        { type: 'Item', caption: 'Bayar Tagihan', link: 'other-service/tagihan' },
       ],
     },
     { type: 'Divider' },
@@ -122,8 +122,8 @@ export class AppComponent {
       caption: 'Pengaturan',
       icon: 'gear',
       children: [
-        { type: 'Item', caption: 'Pengaturan Toko', link: 'settings' },
-        { type: 'Item', caption: 'Pengaturan Admin', link: 'settings' },
+        { type: 'Item', caption: 'Pengaturan Toko', link: 'settings/toko' },
+        { type: 'Item', caption: 'Pengaturan Admin', link: 'settings/admin' },
       ],
     },
   ];

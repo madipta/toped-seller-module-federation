@@ -10,11 +10,14 @@ export const appRoutes: Route[] = [
     loadChildren: () => import('discussion/Routes').then((m) => m.remoteRoutes),
   },
   {
-    path: 'home',
+    path: '',
     loadChildren: () => import('home/Routes').then((m) => m.remoteRoutes),
   },
   {
-    path: '',
-    loadChildren: () => import('home/Routes').then((m) => m.remoteRoutes),
+    path: '**',
+    loadComponent: () =>
+      import('./components/not-implemented/not-implemented.component').then(
+        (m) => m.NotImplementedComponent
+      ),
   },
 ];
